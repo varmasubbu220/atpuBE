@@ -17,7 +17,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 const router = require('./routes/routes');
 app.use('/user', router);
-// Allow CORS for other routes
 app.options('*', cors(corsOptions));
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);

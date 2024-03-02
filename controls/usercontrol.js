@@ -7,7 +7,7 @@ const Mailer = require('../utils/mail');
 const createUser = handleAsyncError(async (req, res) => {
     const { email, password, name } = req.body;
 
-    // Check if email, password, and name are provided and valid
+    
     if (!email || !password || !name) {
         return res.status(400).json({ success: false, error: 'Email, password, and name are required.' });
     }
