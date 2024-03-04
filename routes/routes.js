@@ -5,6 +5,8 @@ const {createUser,Login,forgotPassword,verifyAndUpdatePassword}=require('../cont
 const {createDeliveryAddress,getDeliveryAddressById}=require('../controls/addresscontroller')
 const {createContactDetails,getContactDetailsById}=require('../controls/contactdetailscontrol')
 const sendmail=require('../controls/sendMail')
+const {MakeOrder}=require('../controls/payment')
+router.route('/makeorder').post(MakeOrder)
 //auth routes
 router.route('/register').post(createUser)
 router.route('/login').post(Login)
